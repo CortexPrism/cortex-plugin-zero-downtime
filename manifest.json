@@ -1,7 +1,7 @@
 {
   "name": "cortex-plugin-zero-downtime",
-  "version": "1.0.0",
-  "description": "Zero-Downtime Migration Planner — Dual-write strategies, canary deploys, rollback procedures for DB/API/infra migrations",
+  "version": "1.0.1",
+  "description": "Zero-Downtime Migration Planner \u2014 Dual-write strategies, canary deploys, rollback procedures for DB/API/infra migrations",
   "kind": "esm",
   "entryPoint": "mod.ts",
   "runtime": "deno",
@@ -9,7 +9,10 @@
   "license": "MIT",
   "repository": "https://github.com/CortexPrism/cortex-plugin-zero-downtime",
   "homepage": "https://cortexprism.io/marketplace/plugins/zero-downtime",
-  "capabilities": ["tools", "network:fetch"],
+  "capabilities": [
+    "tools",
+    "network:fetch"
+  ],
   "tools": [
     {
       "name": "migration_plan",
@@ -21,7 +24,11 @@
       "description": "Validate each step against failure modes",
       "params": []
     },
-    { "name": "migration_rollback", "description": "Generate rollback procedure", "params": [] },
+    {
+      "name": "migration_rollback",
+      "description": "Generate rollback procedure",
+      "params": []
+    },
     {
       "name": "migration_execute",
       "description": "Execute migration step with verification",
@@ -29,6 +36,13 @@
     }
   ],
   "dependencies": {},
-  "peerDependencies": { "cortex": ">=1.0.0" },
-  "aiDisclosure": { "tools": ["Kilo (DeepSeek) — batch scaffold"], "humanReview": true }
+  "peerDependencies": {
+    "cortex": ">=0.51.0"
+  },
+  "aiDisclosure": {
+    "tools": [
+      "Kilo (DeepSeek) \u2014 batch scaffold"
+    ],
+    "humanReview": true
+  }
 }
